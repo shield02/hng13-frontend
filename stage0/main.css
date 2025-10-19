@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f7f9fc;
+    padding: 2rem;
+    margin: 0;
+}
+.root {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.profile-card {
+    background: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+    min-height: 500px;
+}
+.profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    object-fit: contain;
+}
+h2, h3, p {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+}
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.social-links a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.social-links a:hover,
+.social-links a:focus {
+    text-decoration: underline;
+}
+
+@media (max-width:699px) {
+    body {
+        padding: 1rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .profile-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .profile-avatar img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-card > *:not(.profile-avatar) {
+        flex: 1;
+    }
+}
+@media (min-width: 1024px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .profile-avatar {
+        flex-shrink: 0;
+    }
+
+    .profile-avatar img {
+        width: 250px;
+        height: 250px;
+        border-radius: 30%;
+    }
+
+    .profile-card > *:not(.profile-avatar) {
+        flex: 1;
+    }
+}
